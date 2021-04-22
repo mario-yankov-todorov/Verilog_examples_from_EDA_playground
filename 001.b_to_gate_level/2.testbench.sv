@@ -21,29 +21,31 @@ module b_to_gray_gate_level_TB;
  
   
 	// Instantiate the Unit Under Test (UUT)
-	b_to_gray_gate_level uut (
-		  .b3(b3),
-		  .b2(b2),
-		  .b1(b1),
-		  .b0(b0),
-		  .g3(g3),
-		  .g2(g2),
-		  .g1(g1),
-		  .g0(g0)
-	);
+	b_to_gray_gate_level uut 
+  		(
+		  	.b3(b3),
+		  	.b2(b2),
+		  	.b1(b1),
+		  	.b0(b0),
+		  	.g3(g3),
+		  	.g2(g2),
+		  	.g1(g1),
+		  	.g0(g0)
+		);
 
 
 	initial begin
 	  
 	  	$dumpfile("dump.vcd");
-		$dumpvars(1,     b_to_gray_gate_level_TB);
+	  	$dumpvars(1, b_to_gray_gate_level_TB);
 		
 		$display("b_to_gray_gate_level_TB");
 
 	$monitor 
-	  (
-	   "%t\|  binary --> %b %b %b %b -- %b %b %b %b <-- gray", $time, b3, b2, b1, b0, g3, g2, g1, g0
-	  );
+		(
+	   		"%t\|  binary --> %b %b %b %b -- %b %b %b %b <-- gray",
+		  	$time, b3, b2, b1, b0, g3, g2, g1, g0
+	  	);
 		
 		// Initialize Inputs
 	  		// 0
@@ -54,11 +56,6 @@ module b_to_gray_gate_level_TB;
 
 
 		// Add stimulus here
-		#10 // 3
-			b3 = 0;
-			b2 = 0;
-	  		b1 = 1;
-			b0 = 1;
 		#10 // 1
 			b3 = 0;
 			b2 = 0;
