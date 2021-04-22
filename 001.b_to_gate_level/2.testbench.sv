@@ -54,6 +54,11 @@ module b_to_gray_gate_level_TB;
 
 
 		// Add stimulus here
+		#10 // 3
+			b3 = 0;
+			b2 = 0;
+	  		b1 = 1;
+			b0 = 1;
 		#10 // 1
 			b3 = 0;
 			b2 = 0;

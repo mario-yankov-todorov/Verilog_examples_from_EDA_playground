@@ -5,17 +5,17 @@
 `timescale 1ns / 1ps
 
 module 	b_to_gray_gate_level 
-      (
+	  (
 		input 	b3,
 		input 	b2,
-        input 	b1,
+		input 	b1,
 		input 	b0,
 
 		output 	g3,
-        output	g2,
-        output	g1,
-        output  g0
-       );
+		output	g2,
+		output	g1,
+		output  g0
+	   );
   
   	
   buf(g3, b3);
