@@ -5,7 +5,7 @@
 
 module ALU_top_TB();
   
-  	parameter	Width	= 4           	;
+  	parameter            	Width  =  4	;
   
    	// Inputs  
 	reg 	[Width	-1:0]   A         	;
@@ -26,14 +26,14 @@ module ALU_top_TB();
   	// Instantiate the Unit Under Test (UUT)
   	ALU_top #(Width) uut 
   		(
-	  	 	.A         		(A),    
-	  		.B         		(B),
-		  	.ALUControl		(ALUControl),
-		  	.Result    		(Result),
-	  	 	.Z         		(Z),    
-	  	 	.N         		(N),    
-	  	 	.C         		(C),    
-	  	 	.V         		(V)    
+	  	 	.A          	(A)         	,    
+	  		.B          	(B)         	,
+		  	.ALUControl 	(ALUControl)	,
+		  	.Result     	(Result)    	,
+	  	 	.Z          	(Z)         	,    
+	  	 	.N          	(N)         	,    
+	  	 	.C          	(C)         	,    
+	  	 	.V          	(V)    
 		);
   
   	initial begin
@@ -68,11 +68,11 @@ module ALU_top_TB();
 		// Add stimulus here
 		for (i = 0; i < (2**(2*Width)) * 4; i = i + 1) begin
 
-			{ALUControl, A, B} = i;
-			#10;
+			{ALUControl, A, B} = i	;
+			#10                   	;
 		end
 		
-		#20 $finish;
+		#20 $finish               	;
 
 	end
 
