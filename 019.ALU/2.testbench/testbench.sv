@@ -5,35 +5,35 @@
 
 module ALU_top_TB();
   
-  	parameter Width	= 4	;
+  	parameter Width	= 4					;
   
    	// Inputs  
-  	reg		[Width	-1:0]   A			;
-  	reg		[Width	-1:0]   B			;
-  	reg 	[2		-1:0]  	ALUControl	;
+	reg		[Width	-1:0]   A			;
+	reg		[Width	-1:0]   B			;
+	reg		[2    	-1:0]  	ALUControl	;
  
 	// Output
   	wire	[Width	-1:0]	Result		;
-  	wire					Z			;
-  	wire					N			;
-  	wire					C			;
-  	wire					V			;
-  
-  	integer 				i			;
-  	integer 				k			;
+  	wire	             	Z			;
+  	wire	             	N     		;
+  	wire	             	C     		;
+  	wire	             	V     		; 
+	  	
+  	integer	             	i     		;
+  	integer	             	k     		;
   
   
   	// Instantiate the Unit Under Test (UUT)
   	ALU_top #(Width) uut 
   		(
-	  	 	.A				(A),    
-	  		.B				(B),
+	  	 	.A         		(A),    
+	  		.B         		(B),
 		  	.ALUControl		(ALUControl),
-		  	.Result			(Result),
-	  	 	.Z				(Z),    
-	  	 	.N				(N),    
-	  	 	.C				(C),    
-	  	 	.V				(V)    
+		  	.Result    		(Result),
+	  	 	.Z         		(Z),    
+	  	 	.N         		(N),    
+	  	 	.C         		(C),    
+	  	 	.V         		(V)    
 		);
   
   	initial begin
@@ -59,9 +59,9 @@ module ALU_top_TB();
 
 		
 		// Initialize Inputs
-		A			= 	0	;
-		B 			= 	0	;
-   		ALUControl 	= 	0	;
+		A         	= 	0	;
+		B         	= 	0	;
+   		ALUControl	= 	0	;
 		
 
 
