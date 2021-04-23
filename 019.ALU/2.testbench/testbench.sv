@@ -5,16 +5,16 @@
 
 module ALU_top_TB();
   
-  	parameter Width	= 4					;
+  	parameter	Width	= 4           	;
   
    	// Inputs  
-	reg		[Width	-1:0]   A			;
-	reg		[Width	-1:0]   B			;
-	reg		[2    	-1:0]  	ALUControl	;
+	reg 	[Width	-1:0]   A         	;
+	reg 	[Width	-1:0]   B         	;
+	reg 	[2    	-1:0]  	ALUControl	;
  
 	// Output
   	wire	[Width	-1:0]	Result		;
-  	wire	             	Z			;
+  	wire	             	Z     		;
   	wire	             	N     		;
   	wire	             	C     		;
   	wire	             	V     		; 
