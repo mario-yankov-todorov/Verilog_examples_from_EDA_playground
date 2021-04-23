@@ -10,17 +10,17 @@ module ALU_top_TB();
    	// Inputs  
   	reg		[Width	-1:0]   A			;
   	reg		[Width	-1:0]   B			;
-  	reg 	[2	-1:0]  		ALUControl	;
+  	reg 	[2		-1:0]  	ALUControl	;
  
 	// Output
-  	wire	[Width	-1:0]	Result	;
-  	wire				Z			;
-  	wire				N			;
-  	wire				C			;
-  	wire				V			;
+  	wire	[Width	-1:0]	Result		;
+  	wire					Z			;
+  	wire					N			;
+  	wire					C			;
+  	wire					V			;
   
-  	integer i						;
-  	integer k						;
+  	integer 				i			;
+  	integer 				k			;
   
   
   	// Instantiate the Unit Under Test (UUT)
@@ -75,5 +75,5 @@ module ALU_top_TB();
 		#20 $finish;
 
 	end
-	  
+
 endmodule
